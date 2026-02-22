@@ -69,8 +69,25 @@
             <section id="filtered_cards" class="space-y-5">
             </section>
 
+            
+            <!-- Empty Box -->
+            <section id="emptyBox" class="">
+                <div class="p-20 rounded-sm border-[#64748B] bg-[#F1F2F4]">
+                    <div class="flex justify-center items-center flex-col space-y-3">
+                        <div>
+                            <img src="./image/jobs.png" alt="">
+                        </div>
+
+                        <div class="text-center">
+                            <h2 class="text-2xl font-semibold text-[#002C5C]">No jobs available</h2>
+                            <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- All Card Section -->
-            <section id="cards" class="space-y-5">
+            <section id="cards" class="hidden space-y-5">
                 <!-- Card 1 -->
                 <div class="card_box flex justify-between rounded-sm p-5 bg-[#F1F2F4]">
                     <!-- Left Side Box -->
@@ -187,6 +204,8 @@
 
         </section>
     </main>
+
+    <script src="function.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
