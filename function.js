@@ -115,3 +115,31 @@ function interviewRender(){
         filterCards.appendChild(div);
     }
 } 
+
+
+// function for showing empty box when card is empty.
+function showEmptyBox(){
+    if(currentStatus == "filter_all_btn"){
+        if(allCards.children.length === 0){
+            emptyBox.classList.remove("hidden");
+        } else{
+            emptyBox.classList.add("hidden");
+        }
+    }
+
+    else if(currentStatus == "filter_interview_btn"){
+        if(interViewList.length === 0){
+            emptyBox.classList.remove("hidden")
+        } else{
+            emptyBox.classList.add("hidden")
+        }
+    }
+
+    else if(currentStatus == "filter_rejected_btn"){
+        if(rejectedList.length === 0){
+            emptyBox.classList.remove("hidden");
+        } else{
+            emptyBox.classList.add("hidden");
+        };
+    };
+};
