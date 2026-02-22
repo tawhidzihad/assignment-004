@@ -18,6 +18,170 @@
     <title>Job Application Tracker</title>
 </head>
 <body>
+    <header class="w-[70%] mx-auto border-b-2 border-[#E6E7E9] space-y-8 py-10">
+        <h1 class="text-3xl font-bold text-[#002C5C]">Job Application Tracker</h1>
 
+        <div class="grid grid-cols-3 gap-4">
+            <div class="bg-[#F1F2F4] py-5 px-6 rounded-sm">
+                <p class="text-[#323B49]">Total</p>
+                <p id="totalCount" class="font-bold text-2xl text-[#002C5C]">0</p>
+            </div>
+
+            <div class="bg-[#F1F2F4] py-5 px-6 rounded-sm">
+                <p class="text-[#323B49]">Interview</p>
+                <p id="interviewCount" class="font-bold text-2xl text-[#10B981]">0</p>
+            </div>
+
+            <div class="bg-[#F1F2F4] py-5 px-6 rounded-sm">
+                <p class="text-[#323B49]">Rejected</p>
+                <p id="rejectCount" class="font-bold text-2xl text-[#EF4444]">0</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-[70%] mx-auto py-5 space-y-5">
+        <section class="flex justify-between">
+            <div>
+                <h2 class="font-semibold text-[20px] text-[#002C5C]">Available Jobs</h2>
+            </div>
+
+            <div>
+                <p class="text-[#64748B]"><span id="avlJobs">0</span> Jobs</p>
+            </div>
+        </section>
+
+
+        <!-- Buttons & Card Section -->
+        <section class="space-y-4">
+            <!-- Buttons Section -->
+            <section class="flex gap-4">
+                <button id="filter_all_btn" class="btn px-8 bg-[#3B82F6] text-white">All</button>
+                <button id="filter_interview_btn" class="btn">Interview</button>
+                <button id="filter_rejected_btn" class="btn">Rejected</button>
+            </section>
+
+
+            <!-- Cards Section -->
+            <section class="space-y-5">
+                
+                <!-- Card 1 -->
+                <div class="flex justify-between rounded-sm p-5 bg-[#F1F2F4]">
+                    <!-- Left Side Box -->
+                    <div class="space-y-4">
+                        <div>
+                            <h2 class="companyName text-[18px] font-semibold text-[#002C5C]">Mobile First Corp</h2>
+                            <p class="position text-[#64748B]">React Native Developer</p>
+                        </div>
+
+                        <div>
+                            <span class="location text-[14px] text-[#64748B]">Remote • </span>
+                            <span class="type text-[14px] text-[#64748B]">Full-time • </span>
+                            <span class="salary text-[14px] text-[#64748B]">$130,000 - $175,000</span>
+                        </div>
+
+                        <div>
+                            <span class="staTus bg-[#EEF4FF] px-1.5 py-2 rounded-sm text-[#002C5C]">NOT APPLIED</span>
+                        </div>
+
+                        <div>
+                            <p class="description text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users  worldwide.</p>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <button class="interviewBtn btn text-[#10B981] border border-[#10B981]">INTERVIEW</button>
+                            <button class="rejectedBtn btn text-[#EF4444] border border-[#EF4444]">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Box -->
+                    <div>
+                        <div class="btn rounded-full p-3">
+                            <i class="deleteBtn fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="flex justify-between rounded-sm p-5 bg-[#F1F2F4]">
+                    <!-- Left Side Box -->
+                    <div class="space-y-4">
+                        <div>
+                            <h2 class="companyName text-[18px] font-semibold text-[#002C5C]">WebFlow Agency</h2>
+                            <p class="position text-[#64748B]">Web Designer & Developer</p>
+                        </div>
+
+                        <div>
+                            <span class="location text-[14px] text-[#64748B]">Los Angeles, CA • </span>
+                            <span class="type text-[14px] text-[#64748B]">Part-time • </span>
+                            <span class="salary text-[14px] text-[#64748B]">$80,000 - $120,000</span>
+                        </div>
+
+                        <div>
+                            <span class="staTus bg-[#EEF4FF] px-1.5 py-2 rounded-sm text-[#002C5C]">NOT APPLIED</span>
+                        </div>
+
+                        <div>
+                            <p class="description text-[#323B49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <button class="interviewBtn btn text-[#10B981] border border-[#10B981]">INTERVIEW</button>
+                            <button class="rejectedBtn btn text-[#EF4444] border border-[#EF4444]">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Box -->
+                    <div>
+                        <div class="btn rounded-full p-3">
+                            <i class="deleteBtn fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Card 3 -->
+                <div class="flex justify-between rounded-sm p-5 bg-[#F1F2F4]">
+                    <!-- Left Side Box -->
+                    <div class="space-y-4">
+                        <div>
+                            <h2 class="companyName text-[18px] font-semibold text-[#002C5C]">DataViz Solutions</h2>
+                            <p class="position text-[#64748B]">Data Visualization Specialist</p>
+                        </div>
+
+                        <div>
+                            <span class="location text-[14px] text-[#64748B]">Boston, MA • </span>
+                            <span class="type text-[14px] text-[#64748B]">Full-time • </span>
+                            <span class="salary text-[14px] text-[#64748B]">$125,000 - $165,000</span>
+                        </div>
+
+                        <div>
+                            <span class="staTus bg-[#EEF4FF] px-1.5 py-2 rounded-sm text-[#002C5C]">NOT APPLIED</span>
+                        </div>
+
+                        <div>
+                            <p class="description text-[#323B49]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <button class="interviewBtn btn text-[#10B981] border border-[#10B981]">INTERVIEW</button>
+                            <button class="rejectedBtn btn text-[#EF4444] border border-[#EF4444]">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Box -->
+                    <div>
+                        <div class="btn rounded-full p-3">
+                            <i class="deleteBtn fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
