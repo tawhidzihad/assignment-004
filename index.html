@@ -34,7 +34,7 @@
 
             <div class="bg-[#F1F2F4] py-5 px-6 rounded-sm">
                 <p class="text-[#323B49]">Rejected</p>
-                <p id="rejectCount" class="font-bold text-2xl text-[#EF4444]">0</p>
+                <p id="rejectedCount" class="font-bold text-2xl text-[#EF4444]">0</p>
             </div>
         </div>
     </header>
@@ -46,23 +46,28 @@
             </div>
 
             <div>
-                <p class="text-[#64748B]"><span id="avlJobs">0</span> Jobs</p>
+                <p class="text-[#64748B]">
+                    <span id="filCjobs"></span> 
+                    <span id="avlJobs">0</span> Jobs
+                </p>
             </div>
         </section>
 
-
         <!-- Buttons & Card Section -->
         <section class="space-y-4">
+
             <!-- Buttons Section -->
             <section class="flex gap-4">
-                <button id="filter_all_btn" class="btn px-8 bg-[#3B82F6] text-white">All</button>
-                <button id="filter_interview_btn" class="btn">Interview</button>
-                <button id="filter_rejected_btn" class="btn">Rejected</button>
+                <button onclick="toggleStyle('filter_all_btn')" id="filter_all_btn" class="px-8 py-2 bg-[#3B82F6] text-white rounded-sm border border-gray-300">All</button>
+
+                <button onclick="toggleStyle('filter_interview_btn')" id="filter_interview_btn" class="px-4 border border-gray-300 rounded-sm">Interview</button>
+
+                <button onclick="toggleStyle('filter_rejected_btn')" id="filter_rejected_btn" class="px-4 border border-gray-300 rounded-sm">Rejected</button>
             </section>
 
 
             <!-- Cards Section -->
-            <section class="space-y-5">
+            <section id="cards" class="space-y-5">
                 
                 <!-- Card 1 -->
                 <div class="flex justify-between rounded-sm p-5 bg-[#F1F2F4]">
