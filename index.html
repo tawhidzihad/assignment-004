@@ -47,15 +47,14 @@
 
             <div>
                 <p class="text-[#64748B]">
-                    <span id="filCjobs"></span> 
-                    <span id="avlJobs">0</span> Jobs
+                    <span id="avlJobs"><span id="filterJob"></span>0</span> Jobs
                 </p>
             </div>
         </section>
 
+
         <!-- Buttons & Card Section -->
         <section class="space-y-4">
-
             <!-- Buttons Section -->
             <section class="flex gap-4">
                 <button onclick="toggleStyle('filter_all_btn')" id="filter_all_btn" class="px-8 py-2 bg-[#3B82F6] text-white rounded-sm border border-gray-300">All</button>
@@ -66,9 +65,12 @@
             </section>
 
 
-            <!-- Cards Section -->
+            <!-- Filtared Cards Section -->
+            <section id="filtered_cards" class="">
+            </section>
+
+            <!-- All Card Section -->
             <section id="cards" class="space-y-5">
-                
                 <!-- Card 1 -->
                 <div class="flex justify-between rounded-sm p-5 bg-[#F1F2F4]">
                     <!-- Left Side Box -->
