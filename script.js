@@ -61,20 +61,20 @@ function toggleStyle(id){
     if(id == "filter_interview_btn"){
         allCards.classList.add("hidden");
         filterCards.classList.remove("hidden");
-        filterJobCount = interViewList.length;
+        availableJobs.innerText = `${interViewList.length} of ${allCards.children.length}`;
         interviewRender();
     }
 
     else if(id == "filter_all_btn"){
         allCards.classList.remove("hidden");
         filterCards.classList.add("hidden");
-        availableJobs.innerText = allCards.children.length;
+        availableJobs.innerText = `${allCards.children.length}`;
     }
 
     else if(id == "filter_rejected_btn"){
         allCards.classList.add("hidden");
         filterCards.classList.remove("hidden");
-        filterJobCount = rejectedList.length;
+        availableJobs.innerText = `${rejectedList.length} of ${allCards.children.length}`;
         rejectedRender();
     }
 };
@@ -83,7 +83,7 @@ function toggleStyle(id){
 
 // Event Delegation To Collet Info.
 mainContainer.addEventListener("click", function(event){
-    // Condition to sure which btn was clicked
+    // Condition interview btn was clicked
     if(event.target.classList.contains("interviewBtn")){
         // get full div to collect info
         const parentNode = event.target.parentNode.parentNode;
@@ -117,7 +117,7 @@ mainContainer.addEventListener("click", function(event){
             interViewList.push(infoCard);
         }
 
-        // Remove 
+        // Remove From Array.
         rejectedList = rejectedList.filter(item => item.companyName != infoCard.companyName)
 
         if(currentStatus == "filter_rejected_btn"){
@@ -127,7 +127,7 @@ mainContainer.addEventListener("click", function(event){
         calculateTotal();
     }
 
-    // Condition to sure which btn was clicked
+    // Condition rejected btn was clicked
     else if(event.target.classList.contains("rejectedBtn")){
         // get full div to collect info
         const parentNode = event.target.parentNode.parentNode;
@@ -162,7 +162,7 @@ mainContainer.addEventListener("click", function(event){
         }
 
 
-        // Remove 
+        // Remove From Array.
         interViewList = interViewList.filter(item => item.companyName != infoCard.companyName)
 
         if(currentStatus == "filter_interview_btn"){
@@ -172,6 +172,15 @@ mainContainer.addEventListener("click", function(event){
         calculateTotal();
     }
 
+    //Condition for delete btn waas clicked
+    else if(event.target.classList.contains("deleteBtn")){
+        const parentNode = event.target.parentNode.parentNode.parentNode;
+        
+        // It will remove full card
+        parentNode.remove();
+
+        calculateTotal();
+    }
 });
 
 
