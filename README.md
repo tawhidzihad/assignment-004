@@ -3,4 +3,8 @@
 
 
 # How do you create and insert a new element into the DOM?
-### Answer: We can create new element using **document.createElement()** like: `document.createElement("div")` , And for inserting a element using **appendChild(childElement)** like: `document.body.appendChild(document.createElement("div"));`
+### Answer: We can create new element using **document.createElement()** For example: `document.createElement("div")` , And for inserting a element using **appendChild(childElement)** For example: `document.body.appendChild(document.createElement("div"));`
+
+
+# What is Event Bubbling? And how does it work?
+### Answer: When trigger a event in child element, it cross over it's parent element -> then grand-parent element -> end when it's Document. For example: `a button inside a div, div inside body tag` first buttton event triggered, second div triggered, third body triggered.
