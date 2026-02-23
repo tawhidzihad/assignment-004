@@ -1,5 +1,5 @@
 # 1: What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
-### Answer: The difference is getElementById and getElementsByClassName give HTMLCollection and it update automatically when dom changed, can't run forEach() loop directly, querySelector and querySelectorAll give Nodelist and it don't update automatically, we can run forEach() loop directly, getElementById give single element, getElementsByClassName give all elements that match class name and looks like array but it's not, querySelector give first matching element using css classes, querySelectorAll give all elements using css classes.
+### Answer: The difference is getElementById and getElementsByClassName give HTMLCollection and it update automatically when dom changed, can't run forEach() loop directly, querySelector and querySelectorAll give Nodelist and it don't update automatically, we can run forEach() loop directly, getElementById give single element, getElementsByClassName give all elements that match class name and looks like array but it's not, querySelector give first matching element using css classes, querySelectorAll give all elements using css classes. And getElementById & querySelector don't give HTMLCollection or NodeList because they give single element.
 
 <br>
 <br>
