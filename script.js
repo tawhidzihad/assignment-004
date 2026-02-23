@@ -66,14 +66,14 @@ function toggleStyle(id){
         filterCards.classList.remove("hidden");
         availableJobs.innerText = `${interViewList.length} of ${allCards.children.length}`;
         interviewRender();
-        showEmptyBox()
+        showEmptyBox();
     }
 
     else if(id == "filter_all_btn"){
         allCards.classList.remove("hidden");
         filterCards.classList.add("hidden");
         availableJobs.innerText = `${allCards.children.length}`;
-        showEmptyBox()
+        showEmptyBox();
     }
 
     else if(id == "filter_rejected_btn"){
@@ -81,7 +81,7 @@ function toggleStyle(id){
         filterCards.classList.remove("hidden");
         availableJobs.innerText = `${rejectedList.length} of ${allCards.children.length}`;
         rejectedRender();
-        showEmptyBox()
+        showEmptyBox();
     }
 };
 
@@ -188,14 +188,15 @@ mainContainer.addEventListener("click", function(event){
         // It will remove full card
         parentNode.remove();
 
-        // Update Old Array
+        // interview & rejected theke 1ta item niye dekhe, companyNames jodi thake taile filter kore take ber kore dei.
         interViewList = interViewList.filter(item => item.companyName !== companyNames);
         rejectedList = rejectedList.filter(item => item.companyName !== companyNames);
 
+        // reRender rejected list
         if(currentStatus == "filter_rejected_btn"){
             rejectedRender();
         }
-
+        // reRender interview list
         else if(currentStatus == "filter_interview_btn"){
             interviewRender();
         }
